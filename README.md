@@ -63,6 +63,8 @@ make test        # Build and run all unit tests
 make valgrind    # Check for memory leaks
 make main        # Run example demonstration
 make clean       # Remove compiled artifacts
+```
+--- 
 
 💡 Make sure to have make, g++ (C++20), and optionally valgrind installed.
 
@@ -88,7 +90,7 @@ Descending Order: zebra monkey cat banana apple
 Reverse Order: cat banana monkey apple zebra
 Side Cross Order: apple zebra banana monkey cat
 Middle Out Order: cat banana monkey apple zebra
-
+```
 ---
 
 ## 👩‍💻 Author
