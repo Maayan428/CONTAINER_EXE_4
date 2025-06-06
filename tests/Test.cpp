@@ -1,3 +1,5 @@
+// maayan4282gmail.com
+
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include <string>
 #include "doctest.h"
@@ -560,10 +562,8 @@ TEST_CASE("MiddleOutOrder iteration with even number of integers") {
     std::vector<int> result;
     
     for (int val : moo) {
-        std::cout << val << ", "; 
         result.push_back(val);
     }
-    std::cout << std::endl;
 
     CHECK(result == std::vector<int>{30, 20, 40, 10});
 }
@@ -579,11 +579,8 @@ TEST_CASE("MiddleOutOrder iteration with characters") {
     MiddleOutOrder<char> moo(c);
     std::vector<char> result;
     for (char val : moo) {
-        std::cout << val << " ";  // הדפסת כל ערך
-
         result.push_back(val);
     }
-    std::cout << std::endl;
 
 
     CHECK(result == std::vector<char>{'c', 'b', 'd', 'a', 'e'});
@@ -601,14 +598,10 @@ TEST_CASE("MiddleOutOrder iteration with strings") {
     MiddleOutOrder<std::string> moo(c);
     std::vector<std::string> result;
     for (const std::string& val : moo) {
-        std::cout << val << " ";  // הדפסת כל ערך
-
         result.push_back(val);
     }
-    std::cout << std::endl;
 
-
-    CHECK(result == std::vector<std::string>{"date", "cherry", "fig", "apple", "grape", "banana"});
+    CHECK(result == std::vector<std::string>{"date", "cherry", "fig", "banana", "grape", "apple"});
 }
 
 TEST_CASE("MiddleOutOrder empty container") {
@@ -643,12 +636,8 @@ TEST_CASE("MiddleOutOrder with duplicate elements") {
     MiddleOutOrder<int> moo(c);
     std::vector<int> result;
     for (int val : moo) {
-        std::cout << val << " ";  // הדפסת כל ערך
-
         result.push_back(val);
     }
-    std::cout << std::endl;
-
 
     CHECK(result == std::vector<int>{3, 1, 1, 3, 2});
 }

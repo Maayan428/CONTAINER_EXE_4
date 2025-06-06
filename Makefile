@@ -1,3 +1,4 @@
+
 CXX = g++
 CXXFLAGS = -std=c++20 -Wall -Wextra
 
@@ -12,6 +13,9 @@ main.o: main.cpp
 test: tests/Test.cpp
 	$(CXX) $(CXXFLAGS) $(INCLUDES) -o test tests/Test.cpp
 	./test
+
+valgrind: test
+	valgrind --leak-check=full --track-origins=yes ./test
 
 clean:
 	rm -f *.o main test

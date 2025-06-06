@@ -1,3 +1,5 @@
+// maayan4282gmail.com
+
 #ifndef MYCONTAINERS_MIDDLE_OUT_ORDER_HPP
 #define MYCONTAINERS_MIDDLE_OUT_ORDER_HPP
 
@@ -41,11 +43,14 @@ public:
             return; // allow empty traversal (begin == end)
         }
     
-        std::vector<T> temp = data;
-        std::sort(temp.begin(), temp.end());
-    
+        std::vector<T> temp = data;    
         size_t n = temp.size();
-        int mid = (n + 1) / 2; // Round UP for even n
+        int mid=0;
+        if (n%2==0) {
+            mid = (n) / 2;} // Round UP for even n
+        else{
+            mid = (n-1) / 2;
+        }
     
         middleOutData.push_back(temp[mid]);
     
